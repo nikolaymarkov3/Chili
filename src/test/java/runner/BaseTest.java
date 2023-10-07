@@ -31,6 +31,7 @@ public abstract class BaseTest {
     protected WebDriver getDriver() {
         return driver;
     }
+
     protected WebDriverWait getWait25() {
         if (wait25 == null) {
             wait25 = new WebDriverWait(getDriver(), Duration.ofSeconds(25));
