@@ -9,9 +9,11 @@ import java.time.Duration;
 public abstract class BaseTest {
 
     private WebDriver driver;
-    private WebDriverWait webDriverWait20;
-    private WebDriverWait webDriverWait10;
-    private WebDriverWait webDriverWait5;
+    private WebDriverWait wait25;
+    private WebDriverWait wait20;
+    private WebDriverWait wait10;
+    private WebDriverWait wait5;
+    private WebDriverWait wait3;
 
     @BeforeMethod
     protected void beforeMethod() {
@@ -21,36 +23,54 @@ public abstract class BaseTest {
     @AfterMethod
     protected void afterMethod() {
         driver.quit();
-        webDriverWait20 = null;
-        webDriverWait10 = null;
-        webDriverWait5 = null;
+        wait25 = null;
+        wait20 = null;
+        wait10 = null;
+        wait5 = null;
+        wait3 = null;
     }
 
     protected WebDriver getDriver() {
         return driver;
     }
 
-    protected WebDriverWait getWait20() {
-        if (webDriverWait20 == null) {
-            webDriverWait20 = new WebDriverWait(driver, Duration.ofSeconds(20));
+    protected WebDriverWait getWait25() {
+        if (wait25 == null) {
+            wait25 = new WebDriverWait(driver, Duration.ofSeconds(25));
         }
 
-        return webDriverWait20;
+        return wait25;
+    }
+
+    protected WebDriverWait getWait20() {
+        if (wait20 == null) {
+            wait20 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        }
+
+        return wait20;
     }
 
     protected WebDriverWait getWait10() {
-        if (webDriverWait10 == null) {
-            webDriverWait10 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        if (wait10 == null) {
+            wait10 = new WebDriverWait(driver, Duration.ofSeconds(10));
         }
 
-        return webDriverWait10;
+        return wait10;
     }
 
     protected WebDriverWait getWait5() {
-        if (webDriverWait5 == null) {
-            webDriverWait5 = new WebDriverWait(driver, Duration.ofSeconds(5));
+        if (wait5 == null) {
+            wait5 = new WebDriverWait(driver, Duration.ofSeconds(5));
         }
 
-        return webDriverWait5;
+        return wait5;
+    }
+
+    protected WebDriverWait getWait3() {
+        if (wait3 == null) {
+            wait3 = new WebDriverWait(driver, Duration.ofSeconds(2));
+        }
+
+        return wait3;
     }
 }
