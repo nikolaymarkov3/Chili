@@ -36,7 +36,7 @@ public abstract class BaseTest {
 
     protected WebDriverWait getWait25() {
         if (wait25 == null) {
-            wait25 = new WebDriverWait(driver, Duration.ofSeconds(25));
+            wait25 = new WebDriverWait(getDriver(), Duration.ofSeconds(25));
         }
 
         return wait25;
@@ -44,7 +44,7 @@ public abstract class BaseTest {
 
     protected WebDriverWait getWait20() {
         if (wait20 == null) {
-            wait20 = new WebDriverWait(driver, Duration.ofSeconds(20));
+            wait20 = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
         }
 
         return wait20;
@@ -52,7 +52,7 @@ public abstract class BaseTest {
 
     protected WebDriverWait getWait10() {
         if (wait10 == null) {
-            wait10 = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait10 = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         }
 
         return wait10;
@@ -60,7 +60,7 @@ public abstract class BaseTest {
 
     protected WebDriverWait getWait5() {
         if (wait5 == null) {
-            wait5 = new WebDriverWait(driver, Duration.ofSeconds(5));
+            wait5 = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
         }
 
         return wait5;
@@ -68,7 +68,7 @@ public abstract class BaseTest {
 
     protected WebDriverWait getWait3() {
         if (wait3 == null) {
-            wait3 = new WebDriverWait(driver, Duration.ofSeconds(2));
+            wait3 = new WebDriverWait(getDriver(), Duration.ofSeconds(3));
         }
 
         return wait3;
