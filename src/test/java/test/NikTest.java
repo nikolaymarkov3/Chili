@@ -43,6 +43,6 @@ public class NikTest extends BaseTest {
         Thread.sleep(3000);
         String actualResult = h2CityNameHeader.getText();
 
-        Assert.assertEquals(actualResult,expectedResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }
