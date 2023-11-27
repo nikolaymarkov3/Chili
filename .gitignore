@@ -43,3 +43,4 @@ build/
 local.properties
 debug.log
 .vscode
+/logs/browserstack-plugin.log
