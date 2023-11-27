@@ -1,10 +1,11 @@
-package test;
+package chili.nm.test;
 
+import chili.nm.runner.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import runner.BaseTest;
+
 
 public class NikTest extends BaseTest {
 
