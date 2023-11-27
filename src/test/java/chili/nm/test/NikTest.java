@@ -46,4 +46,5 @@ public class NikTest extends BaseTest {
 
         Assert.assertEquals(actualResult, expectedResult);
     }
+
 }
