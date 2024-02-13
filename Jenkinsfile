@@ -18,6 +18,7 @@ pipeline {
             }
             steps {
                 echo 'testing'
+                sh 'make check || true'
                 
             }
         }
