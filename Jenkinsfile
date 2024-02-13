@@ -8,6 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
+                sh 'mvn -B clean package'
             }
         }
         stage(test){
@@ -19,6 +20,7 @@ pipeline {
             steps {
                 echo 'testing'
                 sh 'make check || true'
+                sh 'mvn:test'
                 
             }
         }
