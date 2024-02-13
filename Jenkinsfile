@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'testing'
                 
-                 npm run build
+                 
                 npm test
                 
             }
