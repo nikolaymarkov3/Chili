@@ -21,7 +21,7 @@ pipeline {
                 echo 'testing'
                 
                  
-                npm run
+                npm mvn -B package --file pom.xml
                 
             }
         }
