@@ -20,7 +20,8 @@ pipeline {
             steps {
                 echo 'testing'
                 
-                sh 'npm run mocha'
+                 npm run build
+                npm test
                 
             }
         }
