@@ -11,7 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
-                sh 'mvn clean install'
+                sh 'npm clean install'
             }
         }
         stage(test){
@@ -22,7 +22,7 @@ pipeline {
             }
             steps {
                 echo 'testing'
-                sh 'mvn test'
+                sh 'npm test'
             }
         }
         stage('deploy') {
