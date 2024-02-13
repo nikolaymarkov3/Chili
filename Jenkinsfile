@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
-                sh 'mvn -B clean package'
+                sh 'mvn'
             }
         }
         stage(test){
@@ -19,8 +19,11 @@ pipeline {
             }
             steps {
                 echo 'testing'
-                sh 'make check || true'
-                sh 'mvn:test'
+                build job: '/QA/TestJob',
+					parameters: [
+						string(name: 'threadsCount', value: threadsCount),
+						string(name: 'runId', value: runId),
+						string(name: 'testList', value: testList)]
                 
             }
         }
