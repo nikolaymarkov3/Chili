@@ -11,7 +11,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
-               
+                sh 'mvn clean install'
             }
         }
         stage(test){
@@ -22,13 +22,14 @@ pipeline {
             }
             steps {
                 echo 'testing'
-              }
+                sh 'mvn test
+            }
         }
         stage('deploy') {
             steps {
                 echo 'deploy'
                 echo "deployng version ${params.VERSION}"
-            }
+             }
         }
 stage('Reports') {
         steps {
@@ -40,10 +41,10 @@ stage('Reports') {
       	   results: [[path: 'report']]
     	   ])
   	        }
-         }
+        }
 
 
         
-}
+    }
 
 }
