@@ -19,11 +19,8 @@ pipeline {
             }
             steps {
                 echo 'testing'
-                build job: '/test',
-					parameters: [
-						string(name: 'threadsCount', value: threadsCount),
-						string(name: 'runId', value: runId),
-						string(name: 'testList', value: testList)]
+                sh 'npm ci'
+                sh 'npm run mocha'
                 
             }
         }
