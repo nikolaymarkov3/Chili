@@ -19,11 +19,7 @@ pipeline {
             }
             steps {
                 echo 'testing'
-                
-                 
-                npm mvn -B --file pom.xml
-                
-            }
+              }
         }
         stage('deploy') {
             steps {
