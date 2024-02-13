@@ -21,7 +21,7 @@ pipeline {
                 echo 'testing'
                 
                  
-                npm test
+                npm run test
                 
             }
         }
