@@ -8,7 +8,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
-                sh 'mvn'
+               
             }
         }
         stage(test){
@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 echo 'testing'
-                build job: '/QA/TestJob',
+                build job: '/test',
 					parameters: [
 						string(name: 'threadsCount', value: threadsCount),
 						string(name: 'runId', value: runId),
