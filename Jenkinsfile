@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'build'
                 cd src
-                mvn clean package
+                
                 // mvn clean install
             }
         }
