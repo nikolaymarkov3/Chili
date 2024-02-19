@@ -11,7 +11,9 @@ pipeline {
         stage('build') {
             steps {
                 echo 'build'
-                sh 'npm clean install'
+                cd src
+                mvn clean package
+                // mvn clean install
             }
         }
         stage(test){
@@ -22,7 +24,7 @@ pipeline {
             }
             steps {
                 echo 'testing'
-                sh 'npm test'
+                mvn test
             }
         }
         stage('deploy') {
