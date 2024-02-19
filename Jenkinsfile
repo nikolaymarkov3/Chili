@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    build job: 'a', parameters: [string(name: 'VERSION', value: '1.2.0'), booleanParam(name: 'executeTests', value: true)]
     options{
         timestamps()
     }
@@ -10,6 +11,7 @@ pipeline {
     stages{
         stage('build') {
             steps {
+                
                 echo 'build'
                 cd src
                 
